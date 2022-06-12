@@ -1,8 +1,7 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
-import pageObject.PageObjectLoginPage;
-import pageObject.PageObjectMainPageStellar;
+import pageobject.PageObjectMainPageStellar;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -13,16 +12,11 @@ public class MainPageGoToBulkiTest {
     public void GoToBulkiTabInConstructorByClickingBulki() {
         // Для запуска в браузере EDGE
         //   Configuration.browser = Browsers.EDGE;
-        sleep(2000);
-        PageObjectMainPageStellar mainPage =  open("https://stellarburgers.nomoreparties.site", PageObjectMainPageStellar.class);
-
+        PageObjectMainPageStellar mainPage = open("https://stellarburgers.nomoreparties.site", PageObjectMainPageStellar.class);
         mainPage.checkBulkiActive();
         mainPage.clickNachinkiUnActive();
-     //   sleep(5000);
         mainPage.checkBulkiUnActive();
         mainPage.clickBulkiUnActive();
-     //   sleep(5000);
         mainPage.checkBulkiActive();
-
     }
 }

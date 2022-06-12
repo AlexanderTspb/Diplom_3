@@ -18,18 +18,4 @@ public class User {
         final String name = RandomStringUtils.randomAlphabetic(10);
         return new User(email, password, name);
     }
-
-    /*
-    @Override
-    public String toString() {
-        return "User{" +
-               "email='" + email + '\'' +
-               ", password='" + password + '\'' +
-               ", name='" + name + '\'' +
-               '}';
-    }
-
-     */
-
-
 }
